@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+   // "strictNullChecks": false,//relajamos el compilador y poddemos declara atributos sin inicilizar
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
