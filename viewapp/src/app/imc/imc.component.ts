@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImcComponent implements OnInit {
 
+  peso!: number;
+  estatura!: number;
+  imc!: number;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  calcularIMC():void {
+    this.imc = this.peso / (this.estatura* this.estatura);
+  }
 }

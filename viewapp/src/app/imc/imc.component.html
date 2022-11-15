@@ -1,1 +1,17 @@
-<p>imc works!</p>
+<div class="input-group mb-3">
+    <span id="id1" class="input-group-text">PESO </span>
+    <input type="number" class="form-control" [(ngModel)]="peso" placeholder="Meta su peso en KG" aria-label="Username"
+      aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <span class="input-group-text" id="id2">ESTATURA </span>
+    <input type="number" class="form-control" [(ngModel)]="estatura" placeholder="Meta su altura en Metros" aria-label="Username"
+      aria-describedby="basic-addon1">
+  </div>
+
+  <button (click)="calcularIMC()">Calcular IMC</button>
+  <p></p>
+  <div *ngIf="imc>0">
+
+    RESULTADO: Su IMC es {{imc}}
+  </div>
