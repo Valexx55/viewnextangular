@@ -11,12 +11,12 @@
 
   <button (click)="calcularIMC()">Calcular IMC</button>
   <p></p>
-  <div *ngIf="imc>0">
+  <div *ngIf="oimc!=null">
 
-    RESULTADO: Su IMC es {{imc}} que corresponde a {{estado}}
+    RESULTADO: Su IMC es {{oimc.imc}} que corresponde a {{oimc.estado}}
   </div>
-  <div *ngIf="imc>0">
+  <div *ngIf="oimc!=null">
 
     <!-- <img alt="imagen resultado" [src]="imagen"> -->
-    <img alt="imagen resultado" src={{imagen}}>
+    <img alt="imagen resultado" src={{oimc.imagen}}>
   </div>
