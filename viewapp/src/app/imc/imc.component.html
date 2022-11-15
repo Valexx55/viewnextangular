@@ -13,5 +13,10 @@
   <p></p>
   <div *ngIf="imc>0">
 
-    RESULTADO: Su IMC es {{imc}}
+    RESULTADO: Su IMC es {{imc}} que corresponde a {{estado}}
+  </div>
+  <div *ngIf="imc>0">
+
+    <!-- <img alt="imagen resultado" [src]="imagen"> -->
+    <img alt="imagen resultado" src={{imagen}}>
   </div>
