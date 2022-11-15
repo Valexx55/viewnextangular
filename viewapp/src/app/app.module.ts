@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DniComponent } from './components/dni/dni.component';
 import { LayoutModule } from './layout/layout.module';
+import { ImcComponent } from './imc/imc.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DniComponent
+    DniComponent,
+    ImcComponent
   ],
   imports: [
     BrowserModule, //aspectos de compatiblidad con navegadores
