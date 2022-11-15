@@ -23,7 +23,7 @@ export class DniComponent implements OnInit {
     //inicializo las propiedades/atributos
     //this es la equitequta e//el componente, la instancia
     this.titulo="CALCULE SU LETRA DEL DNI";
-    this.numero=0;
+    //this.numero=0;
     this.letra='';
     console.log("pasa por el constructor");
   }
