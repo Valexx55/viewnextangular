@@ -12,7 +12,7 @@ export class DniComponent implements OnInit {
   titulo:string;
   //Y MÉTODOS
 
-  //DECLARO COmo constante la secuencia
+  //DECLARO COmo constante la secuencia A NIVEL DE CLASE
   static readonly SECUENCIA_LETRAS = "TRWAGMYFPDXBNJZSQVHLCKE";
 
   numero!:number;//not-null operator
@@ -44,7 +44,7 @@ export class DniComponent implements OnInit {
     console.log(`letra_resultado ${letra_resultado}`);
     this.letra = letra_resultado;
 
-
+//TODO: mostrar la letra opcionalmente
     //OBTENGO EL NÚMERO
   //LO DIVIDO ENTRE 23
   //Y EL MÓDULO ME DA UN NÚMERO ENTREO 0 Y 22

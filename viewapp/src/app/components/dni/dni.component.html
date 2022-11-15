@@ -2,4 +2,6 @@
 <p>{{titulo}}</p><!--INTERPOLACIÓN-->
 <input title="DNI" type="number"  [(ngModel)]="numero" id="fname" placeholder="Intro su dni"><br><br>
 <button (click)="calcularLetraDni()">CALCULAR LETRA</button>
-{{letra}}
+<div *ngIf="letra!=''">
+Su letra del DNI es {{letra}}
+</div>

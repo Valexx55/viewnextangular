@@ -1,0 +1,9 @@
+ANGULAR .- Tecnología / Framework para crear páginas web
+COMPONENTE .- TROZO de pantalla/vista asociado a una etiqueta
+MÓDULO .- Contenedor de compoentes que agrupa una funcionalidad
+SERVICIO .- PROVEEDOR DE DATOS DEL COMPONENTE / envia y recibe datos / AJAX
+DIRECTIVA .- "Atributo de una etiqueta" - EJEMPLO [(ngModel)] directiva de FormsModule
+this .- en el constructor es el propio componente / la instancia 
+static .- modificador de atributos y métodos definidos a nivel de clase (compartidos en todas las instancias)
+let .- palabra reservada para declarar variables locales a un método/FUNCIÓN
+tipos primitivos de TS: string, number, boolean
