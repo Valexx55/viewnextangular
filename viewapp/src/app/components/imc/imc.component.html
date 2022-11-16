@@ -20,3 +20,29 @@
     <!-- <img alt="imagen resultado" [src]="imagen"> -->
     <img alt="imagen resultado" src={{oimc.imagen}}>
   </div>
+
+  <!-- //TODO: mostrar el array de IMCS-->
+  <div *ngIf="array_imcs && array_imcs.length>0">
+
+      <table>
+        <thead>
+          <th>PESO</th>
+          <th>ALTURA</th>
+          <th>IMC</th>
+          <th>ESTADO</th>
+          <th>IMAGEN</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let aux_imc of array_imcs">
+            <td>{{aux_imc.peso}}</td>
+            <td>{{aux_imc.estatura}}</td>
+            <td>{{aux_imc.imc}}</td>
+            <td>{{aux_imc.estado}}</td>
+            <td><img title="imgres" [src]="aux_imc.imagen"></td>
+
+          </tr>
+        </tbody>
+      </table>
+
+
+  </div>

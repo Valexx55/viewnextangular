@@ -43,14 +43,30 @@ export class ImcComponent implements OnInit, OnChanges, OnDestroy, AfterViewInit
   }
 
  
+  mostrarImc (imc_aux:Imc)
+  {
+    console.log(`peso = ${imc_aux.peso} estatura = ${imc_aux.estatura} imc = ${imc_aux.imc}`);
+    this.estatura;
+  }
 
 
   mostrarArrayImcs (lista_imcs : Array<Imc>)
   {
+
+    let imc_aux: Imc;
+    for (let i=0; i<lista_imcs.length;i++)
+    {
+       imc_aux = lista_imcs[i];
+       console.log(`peso = ${imc_aux.peso} estatura = ${imc_aux.estatura} imc = ${imc_aux.imc}`);
+    }
+
     //TODO:recorrer la lista Y LA MUESTRo por consola
-    lista_imcs.forEach( (imc_actual) => {
+    lista_imcs.forEach(  (imc_actual:Imc) => {
+      
       console.log(`peso = ${imc_actual.peso}`);
     } );
+
+    lista_imcs.forEach(this.mostrarImc);
   }
 
   calcularIMC():void {
