@@ -9,7 +9,8 @@
       aria-describedby="basic-addon1">
   </div>
 
-  <button (click)="calcularIMC()">Calcular IMC</button>
+  <button (click)="calcularIMC()" class="btn btn-primary">Calcular IMC</button>
+  <button (click)="limpiarFormulario()" class="btn btn-danger">Borrar</button>
   <p></p>
   <div *ngIf="oimc!=null">
 
@@ -44,5 +45,5 @@
         </tbody>
       </table>
 
-
+      <button *ngIf="array_imcs && array_imcs.length>1" (click)="ordenarPorImc()" class="btn btn-success">Ordenar</button>
   </div>
