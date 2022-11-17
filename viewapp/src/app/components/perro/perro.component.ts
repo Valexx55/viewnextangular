@@ -1,4 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observer } from 'rxjs';
 import { PerroWeb } from 'src/app/models/perro-web';
@@ -35,6 +35,22 @@ export class PerroComponent implements OnInit {
     this.perroService.damePerro().subscribe(
       this.observador_perros
     );
+
+    this.perroService.damePerroConCabeceras().subscribe(
+      {
+        next: (respuesta:HttpResponse<any>) => {
+           this.perro_recibido = <PerroWeb> respuesta.body; //casting - conversion de tipos equivalente 
+           this.perro_recibido = respuesta.body as PerroWeb; //casting - conversion de tipos equivalente 
+           console.log("TIPO MIME = " + respuesta.headers.get('content-type'));
+           console.log("STATUS = " +respuesta.status);
+           console.log("STATUS TEXT = " +respuesta.statusText);
+         
+        },
+      error: (error_rx:HttpErrorResponse) => console.error('ERROR en la com: ' + error_rx),
+      complete: () => console.log('Comunicación completada'),
+      }
+    );
+
   }
 
 }
