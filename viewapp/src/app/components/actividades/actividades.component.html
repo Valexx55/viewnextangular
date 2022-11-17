@@ -1,1 +1,6 @@
 <p>actividades works!</p>
+<!-- TODO: select de los distritos -->
+<select name="listadistritos" (change)="distritoSeleccionado($event)" title="listadistritos">
+    <option *ngFor="let distrito of distritos"
+    value="{{distrito}}">{{distrito}}</option>
+</select>
