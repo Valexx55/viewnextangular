@@ -3,6 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
    // "strictNullChecks": false,//relajamos el compilador y poddemos declara atributos sin inicilizar
+   "noImplicitAny": false,//relajo el compiador para que me permita usar librerías sin tipos /any
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
