@@ -14,6 +14,8 @@ export class PerroComponent implements OnInit {
   observador_perros:Observer<PerroWeb>;
   perro_recibido!:PerroWeb|null;
 //TODO:mostrar la raza
+  raza!:string|null;
+
   constructor(private perroService:PerroService) {
     this.perro_recibido= null;
   this.observador_perros =
@@ -23,6 +25,7 @@ export class PerroComponent implements OnInit {
       console.log('foto perro ', perro_rx.message);
       console.log('status ', perro_rx.status);
       this.perro_recibido = perro_rx;
+      this.raza = this.perro_recibido.message.split('/')[4];
     },
   error: (error_rx:HttpErrorResponse) => console.error('ERROR en la com: ' + error_rx),
   complete: () => console.log('Comunicación completada'),
@@ -36,7 +39,7 @@ export class PerroComponent implements OnInit {
       this.observador_perros
     );
 
-    this.perroService.damePerroConCabeceras().subscribe(
+   /* this.perroService.damePerroConCabeceras().subscribe(
       {
         next: (respuesta:HttpResponse<any>) => {
            this.perro_recibido = <PerroWeb> respuesta.body; //casting - conversion de tipos equivalente 
@@ -49,7 +52,7 @@ export class PerroComponent implements OnInit {
       error: (error_rx:HttpErrorResponse) => console.error('ERROR en la com: ' + error_rx),
       complete: () => console.log('Comunicación completada'),
       }
-    );
+    );*/
 
   }
 

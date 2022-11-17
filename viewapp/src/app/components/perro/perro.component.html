@@ -1,6 +1,8 @@
 <p>perro works!</p>
 <div *ngIf="perro_recibido!=null">
     <img alt="perrorecibido" [src]="perro_recibido.message">
+    <p>Raza: {{raza}}</p>
+  
 </div>
 <div *ngIf="perro_recibido==null">
     NO TENEMOS PERRO
