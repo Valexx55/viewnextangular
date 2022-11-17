@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 
 /**
@@ -16,5 +18,9 @@ export class MadridService {
 
   private static readonly API_MADRID_EVENTOS:string = "https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json?distrito_nombre=";
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+  public getDistrictEvents(district: string): Observable<any> {
+    return this.http.get(MadridService.API_MADRID_EVENTOS + district);
+  }
 }

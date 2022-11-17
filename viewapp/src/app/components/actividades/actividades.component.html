@@ -4,3 +4,19 @@
     <option *ngFor="let distrito of distritos"
     value="{{distrito}}">{{distrito}}</option>
 </select>
+
+<div class="container mx-4 my-4" *ngIf="madridActivitites && madridActivitites.length>0">
+    <table class="table table-striped">
+        <thead>
+            <th scope="col">TITULO</th>
+            <th scope="col"></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let actividad of madridActivitites">
+                <td>{{actividad.title}}</td>
+                <td><button class="btn btn-success">VER EN EL MAPA</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
