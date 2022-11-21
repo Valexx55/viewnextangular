@@ -12,6 +12,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { OcioComponent } from './components/ocio/ocio.component';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { ActividadesComponent } from './components/actividades/actividades.component';
+import { BusquedaAlumnoComponent } from './components/busqueda-alumno/busqueda-alumno.component';
+import { CajaBusquedaComponent } from './components/caja-busqueda/caja-busqueda.component';
+import { ListadoAlumnosComponent } from './components/listado-alumnos/listado-alumnos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ActividadesComponent } from './components/actividades/actividades.compo
     PerroComponent,
     OcioComponent,
     MapaComponent,
-    ActividadesComponent
+    ActividadesComponent,
+    BusquedaAlumnoComponent,
+    CajaBusquedaComponent,
+    ListadoAlumnosComponent
   ],
   imports: [
     BrowserModule, //aspectos de compatiblidad con navegadores
