@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { SearchStudentService } from 'src/app/services/search-student.service';
 
 @Component({
   selector: 'app-caja-busqueda',
@@ -8,7 +9,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class CajaBusquedaComponent implements OnInit {
 
   @ViewChild('cajaBusqueda') caja_input!:ElementRef; //ElementRef envolotorio para las etiquetas
-  constructor() { }
+  constructor(private searchEvent:SearchStudentService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,7 @@ export class CajaBusquedaComponent implements OnInit {
     let termino_busqueda = this.caja_input.nativeElement.value;
     console.log(`termino de búsqueda = ${termino_busqueda}`);
     console.log(`termino de búsqueda = ${caja_busqueda.value}`);
+    this.searchEvent.emitSearchStudentEvent(termino_busqueda);
   }
 
   /**
