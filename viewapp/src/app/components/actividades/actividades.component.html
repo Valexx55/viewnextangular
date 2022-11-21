@@ -12,9 +12,10 @@
             <th scope="col"></th>
         </thead>
         <tbody>
-            <tr *ngFor="let actividad of madridActivitites">
-                <td>{{actividad.title}}</td>
-                <td><button class="btn btn-success">VER EN EL MAPA</button></td>
+            <tr *ngFor="let evento of madridActivitites">
+                <td>{{evento.title}}</td>
+                <td><button class="btn btn-success" (click)="verEnElMapa(evento)">VER EN EL MAPA</button></td>
+                <td><button class="btn btn-primary" (click)="verDetalleEvento(evento)">VER DETALLE</button></td>
             </tr>
         </tbody>
     </table>

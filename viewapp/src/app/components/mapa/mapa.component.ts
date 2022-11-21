@@ -1,14 +1,41 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import * as L from 'leaflet';
+import { Subscription } from 'rxjs';
+import { Evento } from 'src/app/models/evento';
+import { ComunicadorService } from 'src/app/services/comunicador.service';
 
 @Component({
   selector: 'app-mapa',
   templateUrl: './mapa.component.html',
   styleUrls: ['./mapa.component.css']
 })
-export class MapaComponent implements OnInit, AfterViewInit {
+export class MapaComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  constructor() { }
+
+  suscriptor:Subscription;
+
+  constructor(private comunicadorService:ComunicadorService) {
+
+    //"Mapa está escuchando - suscrito"
+    this.suscriptor = this.comunicadorService.observableEvento.subscribe
+    (
+      (evento:Evento)=>
+      {
+        console.log(`Evento recibido en mapa = ${evento.title} `  );
+        this.dibujarPosicionEnElMapa(evento.location.latitude, evento.location.longitude);
+      }
+    )
+
+
+   }
+   //este método es invocado cuando el componente "muere" -se destruye
+  ngOnDestroy(): void {
+    console.log("ngOnDestroy() - MapaComponent");
+    //importante, al salir del componente, abandonar la suscipción al servicio
+    //"dejar de escuchar"
+    this.suscriptor.unsubscribe();
+    
+  }
   ngAfterViewInit(): void {
     this.initMap();
   }
@@ -17,6 +44,7 @@ export class MapaComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     //this.initMap();
+
   }
 
   private initMap():void{

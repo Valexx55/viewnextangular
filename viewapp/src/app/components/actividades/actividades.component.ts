@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observer } from 'rxjs';
 import { Evento } from 'src/app/models/evento';
+import { ComunicadorService } from 'src/app/services/comunicador.service';
 import { MadridService } from 'src/app/services/madrid.service';
 
 @Component({
@@ -17,7 +18,7 @@ export class ActividadesComponent implements OnInit {
   public madridActivitites?: Array<Evento>;
   private districtObserver: Observer<any>;
 
-  constructor(private servicioMadrid:MadridService) {
+  constructor(private servicioMadrid:MadridService, private comunicadorService:ComunicadorService) {
     this.distritos = ['ARGANZUELA', 'BARAJAS', 'CARABANCHEL','CENTRO','CHAMARTIN','CHAMBERI', 'CIUDAD LINEAL', 'FUENCARRAL-EL PARDO', 'HORTALEZA', 'LATINA', 'MONCLOA-ARAVACA', 'MORATALAZ', 'PUENTE DE VALLECAS', 'RETIRO', 'SALAMANCA', 'SAN BLAS-CANILLEJAS', 'TETUAN', 'USERA', 'VILLA DE VALLECAS', 'VILLAVERDE' ];
     this.districtObserver = {
       next: (districtObserver: any) => {
@@ -61,4 +62,16 @@ export class ActividadesComponent implements OnInit {
     this.obtenerEventos(elemento_select.value);
   }
 
+  verEnElMapa(evento:Evento) 
+  {
+    console.log("Evento seleccionado = " + evento.title);
+    //TODO comunicar el evento seleccionado vía servicio
+    this.comunicadorService.comunicarNuevoEventoSeleccionado(evento);
+  }
+
+  verDetalleEvento(evento)
+  {
+    //TODO: LEER EL ID, QUE CONTIENE UNA URL y hacer un get, sobre esa url
+    //para obtener los detalles del evento seleccionado
+  }
 }
