@@ -18,6 +18,8 @@ import { ListadoAlumnosComponent } from './components/listado-alumnos/listado-al
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ModalAlumnoComponent } from './components/modal-alumno/modal-alumno.component';
+import { JuegoPptComponent } from './components/juego-ppt/juego-ppt.component';
+import { MarcadorComponent } from './components/marcador/marcador.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ModalAlumnoComponent } from './components/modal-alumno/modal-alumno.com
     BusquedaAlumnoComponent,
     CajaBusquedaComponent,
     ListadoAlumnosComponent,
-    ModalAlumnoComponent
+    ModalAlumnoComponent,
+    JuegoPptComponent,
+    MarcadorComponent
   ],
   imports: [
     BrowserModule, //aspectos de compatiblidad con navegadores

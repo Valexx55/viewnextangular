@@ -7,3 +7,11 @@ this .- en el constructor es el propio componente / la instancia
 static .- modificador de atributos y métodos definidos a nivel de clase (compartidos en todas las instancias)
 let .- palabra reservada para declarar variables locales a un método/FUNCIÓN
 tipos primitivos de TS: string, number, boolean
+
+COMUNICACIÓN ENTRE COMPONENTES
+
+@INPUT COM DE PADRE A HIJO //property binding x
+@VIEWCHILD ACCEDO DESDE UNA PROPIEADAD del Padre a su HIJO x 
+@OUTPUT COM DE HIJO A PADRE // event biing (evento)
+VÍA SERIVICIO - Con indepencia de la relación jeráquica, puedo comunicar componentes entre sí
+(actividades-mapa) / (cajaBusqueda-listadoAlumnos) x

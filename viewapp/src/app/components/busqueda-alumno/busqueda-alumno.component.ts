@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusquedaAlumnoComponent implements OnInit {
 
-  constructor() { }
+  repogithub:boolean;
+
+  constructor() { 
+    this.repogithub = false;
+  }
 
   ngOnInit(): void {
   }
 
+  checkTocado()
+  {
+    this.repogithub = !this.repogithub;
+    console.log(`repogit = ${this.repogithub}`);
+  }
 }

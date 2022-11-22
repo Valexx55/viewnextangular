@@ -1,3 +1,7 @@
 <!-- <p>busqueda-alumno works!</p> -->
+<div class="form-check">
+    <input class="form-check-input" id="checkGit" type="checkbox" [checked]="repogithub" (click)="checkTocado()">
+    <label for="checkGit">Usar Repo De Github</label>
+</div>
 <app-caja-busqueda></app-caja-busqueda>
-<app-listado-alumnos></app-listado-alumnos>
+<app-listado-alumnos [tiroDeGitHub]="repogithub"></app-listado-alumnos>

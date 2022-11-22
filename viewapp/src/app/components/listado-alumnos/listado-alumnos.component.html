@@ -2,3 +2,4 @@
     <li>{{lista_alumnos|json}}</li>
 </ul> -->
 <a (click)="alumnoTocado(verAlumno)" *ngFor="let verAlumno of lista_alumnos">{{verAlumno.nombre}}, {{verAlumno.apellido}}</a>
+<div *ngIf="!lista_alumnos||lista_alumnos.length==0" >La búsqueda no produjo resultados</div>
