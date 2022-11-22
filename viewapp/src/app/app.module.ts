@@ -15,6 +15,9 @@ import { ActividadesComponent } from './components/actividades/actividades.compo
 import { BusquedaAlumnoComponent } from './components/busqueda-alumno/busqueda-alumno.component';
 import { CajaBusquedaComponent } from './components/caja-busqueda/caja-busqueda.component';
 import { ListadoAlumnosComponent } from './components/listado-alumnos/listado-alumnos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ModalAlumnoComponent } from './components/modal-alumno/modal-alumno.component';
 
 @NgModule({
   declarations: [
@@ -27,14 +30,16 @@ import { ListadoAlumnosComponent } from './components/listado-alumnos/listado-al
     ActividadesComponent,
     BusquedaAlumnoComponent,
     CajaBusquedaComponent,
-    ListadoAlumnosComponent
+    ListadoAlumnosComponent,
+    ModalAlumnoComponent
   ],
   imports: [
     BrowserModule, //aspectos de compatiblidad con navegadores
     AppRoutingModule, //para navegar entre componentes
     FormsModule,//puedo utilizar "facilidades" en formularios
     LayoutModule,//cargo mi módulo "personalizado"
-    HttpClientModule
+    HttpClientModule, BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]//compoenente inicial
