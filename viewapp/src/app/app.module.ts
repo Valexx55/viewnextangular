@@ -20,6 +20,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ModalAlumnoComponent } from './components/modal-alumno/modal-alumno.component';
 import { JuegoPptComponent } from './components/juego-ppt/juego-ppt.component';
 import { MarcadorComponent } from './components/marcador/marcador.component';
+import { FormularioAlumnoComponent } from './components/formulario-alumno/formulario-alumno.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MarcadorComponent } from './components/marcador/marcador.component';
     ListadoAlumnosComponent,
     ModalAlumnoComponent,
     JuegoPptComponent,
-    MarcadorComponent
+    MarcadorComponent,
+    FormularioAlumnoComponent
   ],
   imports: [
     BrowserModule, //aspectos de compatiblidad con navegadores

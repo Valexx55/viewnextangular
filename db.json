@@ -1,50 +1,81 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" },
-      { "id": 2, "title": "maripuri", "author": "typicode" },
-      { "id": 3, "title": "pepelu", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" },
-    "alumnos": [
-        {
-          "id": 15,
-          "nombre": "super RAFITA",
-          "apellido": "NADAL",
-          "email": "jses@es",
-          "edad": 6,
-          "creadoEn": "2022-02-16T20:54:13.445+00:00",
-          "fotoHashCode": null
-        },
-        {
-          "id": 16,
-          "nombre": "SEÑORA",
-          "apellido": "DEL SOMBRERO",
-          "email": "jses@es",
-          "edad": 42,
-          "creadoEn": "2022-02-16T20:55:58.789+00:00",
-          "fotoHashCode": null
-        },
-        {
-          "id": 17,
-          "nombre": "RVALERIANO",
-          "apellido": "MORENO",
-          "email": "valerianomoreno@gmail.com",
-          "edad": 38,
-          "creadoEn": "2022-02-16T20:56:26.104+00:00",
-          "fotoHashCode": null
-        },
-        {
-        
-          "nombre": "PEPE",
-          "apellido": "GARCIA",
-          "edad": 32,
-          "email": "pepe@correo.es",
-          "id": 18,
-          "fotoHashCode": null,
-          "creadoEn": "2022-02-16T20:56:26.104+00:00"
-        }
-      ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "maripuri",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "title": "pepelu",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "alumnos": [
+    {
+      "id": 15,
+      "nombre": "super RAFITA",
+      "apellido": "NADAL",
+      "email": "jses@es",
+      "edad": 6,
+      "creadoEn": "2022-02-16T20:54:13.445+00:00",
+      "fotoHashCode": null
+    },
+    {
+      "id": 16,
+      "nombre": "SEÑORA",
+      "apellido": "DEL SOMBRERO",
+      "email": "jses@es",
+      "edad": 42,
+      "creadoEn": "2022-02-16T20:55:58.789+00:00",
+      "fotoHashCode": null
+    },
+    {
+      "id": 17,
+      "nombre": "RVALERIANO",
+      "apellido": "MORENO",
+      "email": "valerianomoreno@gmail.com",
+      "edad": 38,
+      "creadoEn": "2022-02-16T20:56:26.104+00:00",
+      "fotoHashCode": null
+    },
+    {
+      "nombre": "PEPE",
+      "apellido": "GARCIA",
+      "edad": 32,
+      "email": "pepe@correo.es",
+      "id": 18,
+      "fotoHashCode": null,
+      "creadoEn": "2022-02-16T20:56:26.104+00:00"
+    },
+    {
+      "id": 19,
+      "nombre": "LOLA",
+      "apellido": "BUNNY",
+      "email": "LOLA@lola.es",
+      "edad": 18
+    },
+    {
+      "id": 20,
+      "nombre": "jose",
+      "apellido": "moreno",
+      "email": "jm@correo.es",
+      "edad": 50
+    }
+  ]
 }

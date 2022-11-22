@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BusquedaAlumnoComponent } from './components/busqueda-alumno/busqueda-alumno.component';
 import { DniComponent } from './components/dni/dni.component';
+import { FormularioAlumnoComponent } from './components/formulario-alumno/formulario-alumno.component';
 import { ImcComponent } from './components/imc/imc.component';
 import { JuegoPptComponent } from './components/juego-ppt/juego-ppt.component';
 import { OcioComponent } from './components/ocio/ocio.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:"perro", component: PerroComponent},
   {path:"ocio", component: OcioComponent},//ocio mapas
   {path:"buscar", component: BusquedaAlumnoComponent},//buscador
-  {path:"juegoppt", component: JuegoPptComponent}
+  {path:"juegoppt", component: JuegoPptComponent},
+  {path:"formulario", component: FormularioAlumnoComponent}
 
 ];
 
